@@ -5,7 +5,7 @@ import css from './SearchBar.module.css'
 
 export default function SearchBar({ onSubmit }) {
     return (
-      <header>
+      <header className={css.header}>
         <Formik initialValues={{ searchQuery: '' }}
             onSubmit={(values, actions) => {
                 onSubmit(values.searchQuery);
