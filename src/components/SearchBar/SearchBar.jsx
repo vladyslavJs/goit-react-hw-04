@@ -5,7 +5,7 @@ import { CiSearch } from "react-icons/ci";
 import css from './SearchBar.module.css'
 import { BiLogoMailchimp } from "react-icons/bi";
 
-export default function SearchBar({ onSubmit }) {
+export const SearchBar = ({ onSubmit }) => {
   
     return (
       <header className={css.header}> 
@@ -41,3 +41,5 @@ export default function SearchBar({ onSubmit }) {
     </header>
   );
 }
+
+export default SearchBar;
