@@ -1,4 +1,4 @@
-import ImageCard from "./ImageCard/ImageCard";
+import ImageCard from "../ImageCard/ImageCard";
 import css from './ImegaGallery.module.css'
 
 export const ImageGallery = ({ gallery, onOpen }) => {

@@ -3,7 +3,7 @@ import { fetchImages } from "../../gallery-api";
 import css from "./App.module.css";
 
 import SearchBar from "../SearchBar/SearchBar";
-import ImageGallery from "../ImageGallery";
+import ImageGallery from "../ImageGallery/ImageGallery";
 import ButtonLoadMore from "../ButtonLoadMore/ButtonLoadMore";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import Loader from "../Loader/Loader";
