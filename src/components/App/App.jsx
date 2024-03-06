@@ -73,6 +73,7 @@ function App() {
   const handleLoadMore = () => {
     setPage(page + 1);
     setIsLoading(true);
+    setShowBtn(false);
   };
 
   const handleOpen = (value) => {
