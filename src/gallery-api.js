@@ -12,7 +12,7 @@ export const fetchImages = async (searchQuery, page) => {
             client_id: YOUR_ACCESS_KEY,
             per_page: 12,
             page,
-            orientation: 'portrait',
+            orientation: 'landscape',
         },
     });
     return {
