@@ -12,7 +12,7 @@ export const fetchImages = async (searchQuery, page) => {
             client_id: YOUR_ACCESS_KEY,
             per_page: 12,
             page,
-            orientation: 'landscape',
+            orientation: 'portrait',
         },
     });
     return {
@@ -20,3 +20,5 @@ export const fetchImages = async (searchQuery, page) => {
         totalPages: response.data.total_pages,
     };   
 };
+
+console.log(axios);
