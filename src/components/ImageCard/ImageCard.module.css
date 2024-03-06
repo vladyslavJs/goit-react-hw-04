@@ -7,11 +7,17 @@
 }
 
 .galleryStatistic {
-   display: flex;
+    display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 30px;
     text-align: center;
     align-items: center;
+    box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.15);
+
+}
+
+.li {
+    font-weight: 600;
 }
 
 .statistic {
