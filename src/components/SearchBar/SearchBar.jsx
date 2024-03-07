@@ -12,7 +12,7 @@ export const SearchBar = ({ onSubmit }) => {
         <Formik initialValues={{ searchQuery: '' }}
             onSubmit={(values, actions) => {
               onSubmit(values.searchQuery);
-              if (!values.searchQuery) {
+              if (values.searchQuery.trim() === '') {
                 toast.error('Text input is required for image search.', {
                   style: {
                     background: '#fff',
@@ -23,7 +23,7 @@ export const SearchBar = ({ onSubmit }) => {
                   },
                 });
               }
-                actions.resetForm();
+              actions.resetForm();
         }}>
           <Form className={css.form}><BiLogoMailchimp className={css.iconHeader} />
             <Field

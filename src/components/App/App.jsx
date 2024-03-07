@@ -4,7 +4,7 @@ import css from "./App.module.css";
 
 import SearchBar from "../SearchBar/SearchBar";
 import ImageGallery from "../ImageGallery/ImageGallery";
-import ButtonLoadMore from "../ButtonLoadMore/ButtonLoadMore";
+import LoadMoreBtn from "../LoadMoreBtn/LoadMoreBtn";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import Loader from "../Loader/Loader";
 import ImageModal  from "../ImageModal/ImageModal";
@@ -63,6 +63,7 @@ function App() {
     }, [searchQuery, page])
   
   const handleSearch = (newQuery) => {
+
     setSearchQuery(newQuery);
     setPage(1);
     setImages([]);
@@ -87,13 +88,13 @@ function App() {
   
   return (
     <div className={css.main}>
-      < SearchBar onSubmit={handleSearch} />
+      < SearchBar query={searchQuery} onSubmit={handleSearch} />
       {images.length > 0 && (
           <ImageGallery gallery={images} onOpen={handleOpen} />
         )}
       {isLoading && <Loader/>}
       {error && <ErrorMessage  />}
-      {showBtn && <ButtonLoadMore onClick={handleLoadMore} />}
+      {showBtn && <LoadMoreBtn onClick={handleLoadMore} />}
 
       <ImageModal isOpen={isOpen} onClose={handleClose} content={content} />
       
