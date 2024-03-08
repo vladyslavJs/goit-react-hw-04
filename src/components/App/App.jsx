@@ -33,7 +33,7 @@ function App() {
     const getImages = async () => {
       try {
         // setIsLoading(true);
-        setError(false);
+        // setError(false);
         const { imageData, totalPages } = await fetchImages(searchQuery, page);
         console.log(fetchImages);
         
@@ -51,7 +51,6 @@ function App() {
                   },
                 }); 
         setShowBtn(totalPages !== page && imageData.length > 0);
-
       } catch (error) {
         setError(true);
       }
@@ -63,7 +62,6 @@ function App() {
     }, [searchQuery, page])
   
   const handleSearch = (newQuery) => {
-
     setSearchQuery(newQuery);
     setPage(1);
     setImages([]);
@@ -77,12 +75,12 @@ function App() {
     setShowBtn(false);
   };
 
-  const handleOpen = (value) => {
+  const modalOpen = (value) => {
     setIsOpen(true);
     setContent(value);
   };
 
-  const handleClose = () => {
+  const modalClose = () => {
     setIsOpen(false);
   };
   
@@ -90,13 +88,13 @@ function App() {
     <div className={css.main}>
       < SearchBar query={searchQuery} onSubmit={handleSearch} />
       {images.length > 0 && (
-          <ImageGallery gallery={images} onOpen={handleOpen} />
+          <ImageGallery gallery={images} onOpen={modalOpen} />
         )}
       {isLoading && <Loader/>}
       {error && <ErrorMessage  />}
       {showBtn && <LoadMoreBtn onClick={handleLoadMore} />}
 
-      <ImageModal isOpen={isOpen} onClose={handleClose} content={content} />
+      <ImageModal isOpen={isOpen} onClose={modalClose} content={content} />
       
       <Toaster
         position="top-left"
