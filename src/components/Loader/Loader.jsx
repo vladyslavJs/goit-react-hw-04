@@ -6,10 +6,11 @@ export const Loader = () => {
     <div className={css.loader}>
       <DNA
         visible={true}
-        type="ThreeDots"
-        color="#36D7B7"
-        height={80}
-        width={80}    
+        height="80"
+        width="80"
+        ariaLabel="dna-loading"
+        wrapperStyle={{}}
+        wrapperClass="dna-wrapper"  
       />
     </div>
   );
