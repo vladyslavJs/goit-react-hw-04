@@ -1,12 +1,12 @@
 .header {
     position: fixed;
-    top: 0;
+    top: 10px;
     width: 100%;
     left: 0;
 }
 
 .form {
-    background-color: #37a1f2;
+    background-color: transparent;
     padding: 12px;
     align-items: center;
     text-align: center;
@@ -17,7 +17,7 @@
     margin-right: 5px;
     width: 300px;
     padding: 5px;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.05em;
     border: 1px solid #808080;
     border-radius: 4px;
     
@@ -38,7 +38,7 @@
     align-items: center;
     cursor: pointer;
     line-height: 1.5;
-    
+
     letter-spacing: 0.04em;
     padding: 5px 10px;
     border: transparent;
@@ -71,4 +71,10 @@
     color: #fafafa;
 }
 
+.iconHeader:focus,
+.iconHeader:hover {
+    color: red;
+}
 
+
+ 

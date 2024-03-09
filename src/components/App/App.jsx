@@ -33,9 +33,7 @@ function App() {
     const getImages = async () => {
       try {
         setIsLoading(true);
-        setError(false);
         const { imageData, totalPages } = await fetchImages(searchQuery, page);
-        console.log(fetchImages);
         
         setImages((prevImages) => {
           return [...prevImages, ...imageData];
