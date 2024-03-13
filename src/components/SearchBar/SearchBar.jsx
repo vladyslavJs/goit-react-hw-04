@@ -24,7 +24,7 @@ export const SearchBar = ({ onSubmit }) => {
           onSubmit(values.searchQuery);
           actions.resetForm();
         }}>
-        <Form className={css.form}><BiLogoMailchimp className={css.iconHeader} />
+        <Form className={css.form}>< BiLogoMailchimp className={css.iconHeader} />
           <Field
             type="text"
             name="searchQuery"

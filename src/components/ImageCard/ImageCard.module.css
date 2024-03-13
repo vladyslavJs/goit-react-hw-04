@@ -34,7 +34,7 @@
     font-style: italic;
 }
 
-.button {
+/* .button {
     border-radius: 4px;
     align-items: center;
     line-height: 1.5;
@@ -49,5 +49,5 @@
 .button:hover,
 .button:focus {
     background-color: orangered;
-}
+} */
 
